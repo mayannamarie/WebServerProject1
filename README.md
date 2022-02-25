@@ -8,7 +8,7 @@
 3. Copy folder called Apache24 onto your C: Drive. 
 4. Open a Command prompt with admin privileges and cd into the Apache24 folder and go into bin by typing cd C:\Apache24\bin.
 5. Then install the apache service by typing httpd.exe -k install.
-!(/screenshots/line11.PNG)
+!(screenshots/line11.PNG)
 7. It will ask you for windows firewall access, click allow access.
 8. To start it type in your terminal httpd.exe -k start.
 9. After doing this, you can test your browser to see if it works. 
