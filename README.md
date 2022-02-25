@@ -1,8 +1,8 @@
 # WebServerProject1
 
 ## To install Apache and create two sites we first have to go to the website.
-# First, ensure that you have the latest C++ redistributable from visual studio and download this, choosing the 64 bit.
-# Once this is downloaded, run and agree to the terms then install. After the set says succesful we move to the next step.
+ First, ensure that you have the latest C++ redistributable from visual studio and download this, choosing the 64 bit.
+ Once this is downloaded, run and agree to the terms then install. After the set says succesful we move to the next step.
 1. Go [Here] (https://www.apachelounge.com/download/#google_vignette) to download Apache 2.4.52 Win64.
 2. Download the zip folder called  httpd-2.4.52-win64-VS16.zip and extract all.   
 3. Copy folder called Apache24 onto your C: Drive. 
