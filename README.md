@@ -39,7 +39,7 @@
 - When there do a ctrl-f search for **#Include conf/extra/httpd-vhosts.conf**
 - Once there you remove the # that is before **Include** this uncomments this line by moving the comment marker.
 -Ctrl-s to save this. 
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/includes.PNG)
+![includes](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/includes.PNG)
 5. Go to C:\Apache24\conf\extra and open the httpd-vhosts.conf file and there you will see virtual host information and port information.
 6. Enter the following for site 1 and site 2.
 - Each of our individual sites that we want to publish is referred to as a virtual host.
@@ -91,14 +91,16 @@ AddType application/x-httpd-php .php
 <IfModule dir_module>
     DirectoryIndex index.php index.html
 </IfModule>
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php4.PNG)
+![php4](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php4.PNG)
+
 20. Save your httpd.conf and test the updates in the command line by typing the following:
 
 21. cd into **C:\Apache24\bin**
 type: httpd -t
 Syntax OK should appear … unless you have errors in your configuration.
 If you didn't get an error you can continue by restarting Apache with httpd.
-![](github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php6.PNG)
+
+![php6](github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php6.PNG)
 
 22. To confirm, test a PHP file by creating a new file named index.php in Apache’s web page root folder at C:\Apache24\htdocs.
 23. Add the following PHP code:
@@ -111,3 +113,13 @@ Open a web browser and enter your server address: http://localhost/. A “PHP ve
 You can now create PHP sites and applications in any sub-folder of C:\Apache24\htdocs.
 
 ## How to install MySQL 
+####To install MySQL on WindowsMySQL can be installed on 64-bit editions and require the following runtimes:
+-.NET 4.5.2
+-the Visual C++ redistributable
+
+1. Create a folder on your C:\ drive called mysql to extract the contents of the ZIP to C:\mysql
+2. Next create another folder where database data will be stored, for example as C:\mysqldata. 3. 3. Using a folder outside of C:\mysql is safer and allows you to upgrade application files.
+3. ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/mysql1.PNG)
+4. ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/mysql1.PNG)
+5. 
+6. 
