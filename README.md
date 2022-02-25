@@ -1,5 +1,5 @@
 # WebServerProject1
-Web Server Project 1
+
 ##To install Apache and create two sites we first have to go to the website.
 First, ensure that you have the latest C++ redistributable from visual studio and download this, choosing the 64 bit.
 Onc this is downloaded, run and agree to the terms then install. After the set says succesful we move to the next step.
@@ -19,9 +19,19 @@ Onc this is downloaded, run and agree to the terms then install. After the set s
 - Scroll down Mid-way of the file, you will see Options **Indexes FollowSymLinks**
 - Change this to **Indexes FollowSymLinks** and save and close. 
 - 
-
-- [x] one
-- [x] two
-- [ ] three
-
-> three
+##How to add two sites 
+1. To add 2 sites go to C:\Apache24\htdocs.
+2. There you will see an index.html file which comes with htdocs.
+3. Create two folders called site1.tbd and site2.tbd and add an index.html inside them both were you add your html/css information for your site.
+4. To be able to implement and host multiple sites we would have to go to C:\Apache24\conf into our httpd.conf file.
+- When there do a ctrl-f search for **#Include conf/extra/httpd-vhosts.conf**
+- Once there you remove the # that is before **Include** this uncomments this line by moving the comment marker.
+-Ctrl-s to save this. 
+5. Go to C:\Apache24\conf\extra and open the httpd-vhosts.conf file and there you will see virtual host information and port information.
+6. Enter the following for site 1 and site 2.
+- Each of our individual sites that we want to publish is referred to as a virtual host.
+- Lastly, to resolve a name to an ip address go to C:\Windows\System32\drivers\etc.
+- Click show all files to see your hosts file.
+- Enter the ip address and site1.tbd
+- Followed by the ip address and site2.tbd. 
+- By doing this our client is able to resolve site1.tbd and site2.tbd to the ip of the local server.
