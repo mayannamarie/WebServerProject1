@@ -30,11 +30,9 @@
 2. There you will see an index.html file which comes with htdocs.
 3. Create two folders called site1.tbd and site2.tbd and add an index.html inside them both were you add your html/css information for your site.
 - Site 1 
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1.PNG)
+![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1-1.PNG)
 - Site 2
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site2.PNG)
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1-1.PNG)
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1-1.PNG)
+![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site2-2.PNG)
 5. To be able to implement and host multiple sites we would have to go to C:\Apache24\conf into our httpd.conf file.
 - When there do a ctrl-f search for **#Include conf/extra/httpd-vhosts.conf**
 - Once there you remove the # that is before **Include** this uncomments this line by moving the comment marker.
