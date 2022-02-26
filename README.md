@@ -87,10 +87,10 @@ AddType application/x-httpd-php .php
 </IfModule>
 
 19. Change this to:
-
 <IfModule dir_module>
     DirectoryIndex index.php index.html
 </IfModule>
+![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php1.PNG)
 ![php4](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php4.PNG)
 
 20. Save your httpd.conf and test the updates in the command line by typing the following:
@@ -109,7 +109,7 @@ If you didn't get an error you can continue by restarting Apache with httpd.
   phpinfo();
   ?>
 Open a web browser and enter your server address: http://localhost/. A “PHP version” page will appear showing the various PHP and Apache configuration settings.
-
+![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/phppageloaded.PNG)
 You can now create PHP sites and applications in any sub-folder of C:\Apache24\htdocs.
 
 ## How to install MySQL 
@@ -133,7 +133,7 @@ datadir=C:/mysqldata
 8. Entering the following command at the console prompt:
 
 - C:\mysql\bin\mysqld.exe --initialize-insecure --user=mysql
-- 
+
 ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/mysql3.PNG)
 
 9. The server can now be started with:
