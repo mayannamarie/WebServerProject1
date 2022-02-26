@@ -25,7 +25,7 @@
 - Change this to **Indexes FollowSymLinks** and save and close. 
 ![indexes](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/indexes.PNG)
 
-## How to add two sites 
+## How to add two sites (vhosts)
 1. To add 2 sites go to C:\Apache24\htdocs.
 2. There you will see an index.html file which comes with htdocs.
 3. Create two folders called site1.tbd and site2.tbd and add an index.html inside them both were you add your html/css information for your site.
@@ -121,6 +121,10 @@ If you didn't get an error you can continue by restarting Apache with httpd.
 ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1-1.PNG)
 26. So you can now create PHP sites and applications in any sub-folder of C:\Apache24\htdocs.
 
+ 
+## How to add SSL Certificates to one site
+ 
+ 
 ## How to install MySQL 
 ####To install MySQL on WindowsMySQL can be installed on 64-bit editions and require the following runtimes:
 -.NET 4.5.2
