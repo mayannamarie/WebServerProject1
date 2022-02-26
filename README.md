@@ -30,7 +30,7 @@
 2. There you will see an index.html file which comes with htdocs.
 3. Create two folders called site1.tbd and site2.tbd and add an index.html inside them both were you add your html/css information for your site.
 - Site 1 
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1-1.PNG)
+![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1tbd.PNG)
 - Site 2
 ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site2-2.PNG)
 5. To be able to implement and host multiple sites we would have to go to C:\Apache24\conf into our httpd.conf file.
@@ -100,15 +100,26 @@ If you didn't get an error you can continue by restarting Apache with httpd.
 
 ![php6](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php6.PNG)
 
-22. To confirm, test a PHP file by creating a new file named index.php in Apache’s web page root folder at C:\Apache24\htdocs.
+22. To confirm, test a PHP file by renaming index.html to index.php in Apache’s web page root folder at C:\Apache24\htdocs.
 23. Add the following PHP code:
 
-- <?php
-  phpinfo();
-  ?>
-Open a web browser and enter your server address: http://localhost/. A “PHP version” page will appear showing the various PHP and Apache configuration settings.
-![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/phppageloaded.PNG)
-You can now create PHP sites and applications in any sub-folder of C:\Apache24\htdocs.
+> <html>
+> <body>
+> <h1>This is Maya Pierre and this is site one, it works!</h1>
+> <?php
+> phpinfo();
+> ?>
+> </body>
+> </html>
+
+24. Go into **httpd.conf** file, Ctrl-f to search and ensure your <IfModule dir_module> has this:
+ > <IfModule dir_module>
+ >   DirectoryIndex index.php index.html
+> </IfModule>
+24. Now open a web browser and enter your server address: http://site1.tbd/. 
+25. A PHP version of the previous page will appear showing the various PHP and Apache configuration settings.
+![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1-1.PNG)
+26. So you can now create PHP sites and applications in any sub-folder of C:\Apache24\htdocs.
 
 ## How to install MySQL 
 ####To install MySQL on WindowsMySQL can be installed on 64-bit editions and require the following runtimes:
