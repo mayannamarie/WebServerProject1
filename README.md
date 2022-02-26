@@ -51,7 +51,7 @@
 ![hostfile](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/hostlast.PNG)
 - By doing this our client is able to resolve site1.tbd and site2.tbd to the ip of the local server.
 
-## How to instalL PHP
+## How to install PHP
 1. First you need to download the PHP files
 2. To do this you’ll need the PHP Windows installer. Get the latest PHP 8 x64 Thread Safe ZIP package from. 
 3. ![](https://www.php.net/downloads.php) 
