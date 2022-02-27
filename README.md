@@ -123,8 +123,10 @@ If you didn't get an error you can continue by restarting Apache with httpd.
 
  
 ## How to add SSL Certificates to one site
- 
- 
+1. Go to "SLLwebsite to download a certificate.
+2. Go through the SSL Certificate steps by registering your email and password.
+3. Im the enter Domain, section, enter the name of your site. In this case site2.tbd.
+4.
  
 ## How to install MySQL 
 ####To install MySQL on WindowsMySQL can be installed on 64-bit editions and require the following runtimes:
