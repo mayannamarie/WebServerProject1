@@ -128,7 +128,7 @@ If you didn't get an error you can continue by restarting Apache with httpd.
 1. Open the **httpd-vhost.conf** file and add the following 
 > \<VirtualHost _default_:443>  
 >   ServerName site2.tbd  
->   DocumentRoot "${SRVROOT}/htdocs/site1.tbd/"  
+>   DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
 >   SSLEngine On  
 >   SSLCertificateFile "C:/Apache24/conf/certificate.crt"  
 >   SSLCertificateChainFile "C:/Apache24/conf/ca_bundle.crt"  
