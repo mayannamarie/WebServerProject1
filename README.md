@@ -122,11 +122,32 @@ If you didn't get an error you can continue by restarting Apache with httpd.
 26. So you can now create PHP sites and applications in any sub-folder of C:\Apache24\htdocs.
 
  
-## How to add SSL Certificates to one site
-1. Go to "SLLwebsite to download a certificate.
-2. Go through the SSL Certificate steps by registering your email and password.
-3. Im the enter Domain, section, enter the name of your site. In this case site2.tbd.
-4.
+ 
+ 
+## How to Create & Install SSL Certificate to one site
+1. Open the **httpd-vhost.conf** file and add the following 
+> \<VirtualHost _default_:443>  
+>   ServerName site2.tbd
+>   DocumentRoot "${SRVROOT}/htdocs/site1.tbd/"
+>   SSLEngine On
+>   SSLCertificateFile "C:/Apache24/conf/certificate.crt"
+>   SSLCertificateChainFile "C:/Apache24/conf/ca_bundle.crt"
+>   SSLCertificateKeyFile "C:/Apache24/conf/private.key"
+> \</VirtualHost>  
+2. Edit the **<VirtualHost *:80>** element of site2 as the following  
+> \<VirtualHost *:80>  
+>	ServerName site2.tbd  
+> Redirect permanent / https://site2.tbd/  
+>	DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
+> \</VirtualHost>  
+3. Open the httpd.conf file and uncomment the **ssl_module modules/mod_ssl.so** and **conf/extra/httpd-default.conf** modules.
+4. At this point, HTTP should redirect to HTTPS. However, we need a SSL certificate to remove the security error on the page.
+5. Run the following command to generate a self-signed certificate in your command prompt  
+> openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt  
+6. After you enter the command, you will be taken to a prompt where you can enter information about your website.
+7. Copy the certificate files to **C:\Apache24\conf** folder.
+ 
+ 
  
 ## How to install MySQL 
 ####To install MySQL on WindowsMySQL can be installed on 64-bit editions and require the following runtimes:
