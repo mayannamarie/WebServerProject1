@@ -3,7 +3,7 @@
 ## To install Apache and create two sites we first have to go to the website.
  First, ensure that you have the latest C++ redistributable from visual studio and download this, choosing the 64 bit.
  Once this is downloaded, run and agree to the terms then install. After the set says succesful we move to the next step.  
-1. Go Here -> (https://www.apachelounge.com/download/#google_vignette) to download Apache 2.4.52 Win64.
+1. Download [Apache](https://www.apachelounge.com/download/#google_vignette) 2.4.52 Win64.
 2. Download the zip folder called  httpd-2.4.52-win64-VS16.zip and extract all.   
 3. Copy folder called Apache24 onto your C: Drive. 
 4. Open a Command prompt with admin privileges and cd into the Apache24 folder and go into bin by typing cd C:\Apache24\bin.
@@ -126,20 +126,24 @@ If you didn't get an error you can continue by restarting Apache with httpd.
  
 ## How to Create & Install SSL Certificate to one site
 1. Open the **httpd-vhost.conf** file and add the following 
-> \<VirtualHost _default_:443>  
->   ServerName site2.tbd  
->   DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
->   SSLEngine On  
->   SSLCertificateFile "C:/Apache24/conf/certificate.crt"  
->   SSLCertificateChainFile "C:/Apache24/conf/ca_bundle.crt"  
->   SSLCertificateKeyFile "C:/Apache24/conf/private.key"  
-> \</VirtualHost>  
+ ```
+ <VirtualHost _default_:443>  
+   ServerName site2.tbd  
+   DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
+   SSLEngine On  
+   SSLCertificateFile "C:/Apache24/conf/certificate.crt"  
+   SSLCertificateChainFile "C:/Apache24/conf/ca_bundle.crt"  
+   SSLCertificateKeyFile "C:/Apache24/conf/private.key"  
+ </VirtualHost>  
+ ```
 2. Edit the **<VirtualHost *:80>** element of site2 as the following  
-> \<VirtualHost *:80>  
->	ServerName site2.tbd  
-> Redirect permanent / https://site2.tbd/  
->	DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
-> \</VirtualHost>  
+ ```
+ <VirtualHost *:80>  
+	 ServerName site2.tbd  
+  Redirect permanent / https://site2.tbd/  
+	 DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
+ </VirtualHost>  
+```
 3. Open the httpd.conf file and uncomment the **ssl_module modules/mod_ssl.so** and **conf/extra/httpd-default.conf** modules.
 4. At this point, HTTP should redirect to HTTPS. However, we need a SSL certificate to remove the security error on the page.
 5. Run the following command to generate a self-signed certificate in your command prompt  
