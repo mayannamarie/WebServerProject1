@@ -73,7 +73,8 @@
 3. Also in this same directory of httpd.conf, uncomment the following:
 `Include conf/extra/httpd-ssl.conf`
 4. The result should look as follows:  
-![uncomments](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/uncommentssl.PNG)  
+> ![uncomments](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/uncommentssl.PNG)  
+> ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/ssl4.PNG)
 5. Now open the `httpd-ssl.conf` file and around line 123 modify the following lines to the following:  
 > #   General setup for the virtual host  
 > DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
