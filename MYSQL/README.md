@@ -5,11 +5,11 @@
 - The Visual C++ redistributable
 - Reference: [How to Install MySQL](MySQL version used in this tutorial: MySQL Community Server 8.0.28)
 ---
-## Table of Contents
+## TABLE OF CONTENT
 1. [DOWNLOAD AND EXTRACT](#download-and-extract)
 2. [SPECIFYING FILE APPLICATION AND DATA FOLDERS](#specifying-file-application-and-data-folders)
 3. [INITIALIZE DATA FOLDER AND CREATING ROOT USER](#initialize-data-folder-and-creating-root-user)
-4. [CONFIGURE AND TEST MYSQL AS AUTO STARTING WINDOWS SERVICE](#configure-and-test-mysql-as-auto-starting-windows-service)
+4. [CONFIGURE AND TEST MYSQL](#configure-and-test-mysql)
 ---
 
 ## DOWNLOAD AND EXTRACT 
@@ -56,7 +56,7 @@ datadir=C:/mysqldata
 > ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/mysql5.PNG)  
  ---  
  
- ## CONFIGURE AND TEST MYSQL AS AUTO STARTING WINDOWS SERVICE  
+ ## CONFIGURE AND TEST MYSQL    
 - ***MySQL can also be installed as an auto-starting Windows service:***  
 1. To **test** this, type this in the command prompt:  
 `C:\mysql\bin\mysqld.exe --install`  
