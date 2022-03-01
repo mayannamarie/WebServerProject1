@@ -28,22 +28,22 @@ Referenced from: [How to Install PHP on Windows 10](https://www.sitepoint.com/ho
 ---  
 
 ## CONFIGURE PATH TO ENVIRONMENT VARIABLE 
-10. Now we add `C:\php` to the path environment variable.  
-11. To ensure Windows can find the PHP executable, you need to change the PATH environment variable.  
-12. Click the Windows Start button and type “environment”, then click Edit the system environment variables.  
-13. Select the Advanced tab, and click the Environment Variables button.  
-14. Then scroll down the System variables list and click Path followed by the Edit button.  
-15. Click New and add `C:\php`:  
+1. Now we add `C:\php` to the path environment variable.  
+2. To ensure Windows can find the PHP executable, you need to change the PATH environment variable.  
+3. Click the Windows Start button and type “environment”, then click Edit the system environment variables.  
+4. Select the Advanced tab, and click the Environment Variables button.  
+5. Then scroll down the System variables list and click Path followed by the Edit button.  
+6. Click New and add `C:\php`:  
 > ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php1.PNG)  
-16. Click OK until you’re done. No need to reboot, it may be helpful to close and restart any cmd terminals you have open.
-17. Configure PHP as an Apache module.  
-18. Go to services to verfiy that apache isnt running, if it is running stop the service.
+7. Click OK until you’re done. No need to reboot, it may be helpful to close and restart any cmd terminals you have open.
+8. Configure PHP as an Apache module.  
+9. Go to services to verfiy that apache isnt running, if it is running stop the service.
 ---
 
 ## PHP MODULE AND DEFAULT PHP FILE
-19. Open its `C:\Apache24\conf\httpd.conf` configuration file in a text editor.
-20. We now need to configure PHP as a PHP module.
-21. Add the following lines to the bottom of the file to set PHP as an Apache module (change the file locations if necessary)  
+1. Open its `C:\Apache24\conf\httpd.conf` configuration file in a text editor.
+2. We now need to configure PHP as a PHP module.
+3. Add the following lines to the bottom of the file to set PHP as an Apache module (change the file locations if necessary).  
 
 ```
 > # PHP8 module  
@@ -54,14 +54,14 @@ Referenced from: [How to Install PHP on Windows 10](https://www.sitepoint.com/ho
 
 > ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php2.PNG)  
 
-22. As an option, you change the DirectoryIndex setting to load index.php instead of index.html when it can be found. 
-23. The current setting that you will see is:  
+4. As an option, you change the DirectoryIndex setting to load index.php instead of index.html when it can be found. 
+5. The current setting that you will see is:  
 ```
 > <IfModule dir_module>  
 >    DirectoryIndex index.html  
 > </IfModule>  
 ```
-24. Change this to:
+5. Change this to:
   
 ```
 > <IfModule dir_module>  
@@ -72,20 +72,20 @@ Referenced from: [How to Install PHP on Windows 10](https://www.sitepoint.com/ho
 > ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php1.PNG)  
 > ![php4](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php4.PNG)  
 
-25. Save your httpd.conf and test the updates in the command line by typing the following:  
+6. Save your httpd.conf and test the updates in the command line by typing the following:  
 
-26. cd into `C:\Apache24\bin`, type the following code:  
+7. cd into `C:\Apache24\bin`, type the following code:  
 ```
 httpd -t
 ```
-27. ***Syntax OK*** should appear unless you have errors in your configuration.  
+8. ***Syntax OK*** should appear unless you have errors in your configuration.  
 - If you didn't get an error you can continue by restarting Apache with httpd.  
 > ![php6](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php6.PNG)  
 ---
 
 ## TEST
-1. To confirm the configuration, test a PHP file by renaming index.html to index.php in Apache’s web page root folder at C:\Apache24\htdocs.  
-2. Add the following PHP code:  
+1. To confirm the configuration, test a PHP file by renaming index.html to index.php in Apache’s web page root folder at `C:\Apache24\htdocs`.  
+2. Add the following PHP code or similar:    
 ```
 > \<html>  
 > \<body>  
@@ -106,5 +106,7 @@ httpd -t
 
 4. Now open a web browser and enter your server address: `http://site1.tbd/`.  
 5. A PHP version of the previous page will appear showing the various PHP and Apache configuration settings.  
+ 
 > ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/site1-1.PNG)  
 6. So you can now create PHP sites and applications in any sub-folder of `C:\Apache24\htdocs`.
+---
