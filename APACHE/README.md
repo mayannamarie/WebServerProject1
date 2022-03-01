@@ -4,7 +4,7 @@
  
  ## TABLE OF CONTENT
 1. [DOWNLOAD THE APACHE FILES](#download-the-apache-files)  
-2.  [START APACHE](#start-apache)
+2. [START APACHE](#start-apache)
 4. [DISABLE DIRECTORY LISTING](#disable-directory-listing)
 5. [CONFIGURE TWO SITES](#configure-two-sites)
 6. [SSL CONFIGURATION ON ONE SITE](ssl-configuration-on-one-site)
@@ -58,7 +58,8 @@
 - By doing this our client is able to resolve site1.tbd and site2.tbd to the ip of the local server.
 
 ## SSL CONFIGURATION ON ONE SITE
-2. Edit the `<VirtualHost *:80>` element of site2 as the following  
+ 
+1. Edit the `<VirtualHost *:80>` element of site2 as the following:  
 
  ```
  <VirtualHost *:80>  
@@ -67,26 +68,24 @@
 	 DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
  </VirtualHost>  
 ```
-3. Open the `httpd.conf` file and uncomment the `ssl_module modules/mod_ssl.so` and `conf/extra/httpd-default.conf` modules.
-4. Also in this same directory of httpd.conf, uncomment the following:
+2. Open the `httpd.conf` file and uncomment the `ssl_module modules/mod_ssl.so` and `conf/extra/httpd-default.conf` modules.
+3. Also in this same directory of httpd.conf, uncomment the following:
 `Include conf/extra/httpd-ssl.conf`
-5. The result should look as follows:  
+4. The result should look as follows:  
 ![uncomments](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/uncommentssl.PNG)  
 5. Now open the `httpd-ssl.conf` file and around line 123 modify the following lines to the following:  
-> \#   General setup for the virtual host  
+> #   General setup for the virtual host  
 > DocumentRoot "${SRVROOT}/htdocs/site2.tbd/"  
 > ServerName site2.tbd  
 6. Under **Server Certificate** uncomment `SSLCertificateFile` and modify as follows:
 > SSLCertificateFile "${SRVROOT}/conf/Server.crt"  
 7. Under **Server Private Key** uncomment `SSLCertificateKeyFile` and modify as follows:
 > SSLCertificateKeyFile "${SRVROOT}/conf/Server.key"  
-9. 
-6. Now we need a self-signed certificate to remove the security error on the page.
-7. Open a terminal and **cd** to **C:/Apache24/bin**. Type **.\openssl.exe**. Then type the following command to generate a self-signed certificate in your command prompt  
-> req -x509 -newkey rsa:2048 -keyout server.key -out server.crt -days 1000 -nodes   
-8. After you enter the command, you will be taken to a prompt where you can enter information about your website.
->![sslform](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/sslinfo.PNG)
-9. 
-10. Copy the two generated files (server.key and server.crt) from `C:\Apache24\bin` to `C:\Apache24\conf` folder.
-11. Your final result should look like this:  
+8. Now we need a self-signed certificate to remove the security error on the page.
+9. Open a terminal and **cd** to `C:/Apache24/bin`. Type `.\openssl.exe`. Then type the following command to generate a self-signed certificate in your command prompt  
+> `req -x509 -newkey rsa:2048 -keyout server.key -out server.crt -days 1000 -nodes`   
+10. After you enter the command, you will be taken to a prompt where you can enter information about your website.
+> ![sslform](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/sslinfo.PNG) 
+12. Copy the two generated files (server.key and server.crt) from `C:\Apache24\bin` to `C:\Apache24\conf` folder. 
+13. Your final result should look like this:  
 > ![finalphoto](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/finalphoto.PNG)
