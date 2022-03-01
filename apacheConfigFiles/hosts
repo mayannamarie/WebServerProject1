@@ -1,0 +1,43 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+# 102.54.94.97 rhino.acme.com # source server
+# 38.25.63.10 x.acme.com # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1 localhost
+#	::1 localhost
+
+#Maya's Projects!
+
+127.0.0.1 site1.tbd
+127.0.0.1 site2.tbd
+127.0.0.1 index.php
+#127.0.0.1 mayasite.tbd
+127.0.0.1 maya2.tbd
+127.0.0.1 bonustickies.tbd
+127.0.0.1 becausemicrosoft.tbd
+127.0.0.1 iheartiis.tbd
+127.0.0.1 apache.tbd
+127.0.0.1 apache2.tbd
+127.0.0.1 iheartapache.tbd
+127.0.0.1 iloveapache.tbd
+127.0.0.1 ilove.tbd
+127.0.0.1 localhost
+172.20.143.108 mayasite.tbd
+172.20.143.108 newsite.tbd
+172.20.143.108 mayapress.tbd
+
+::1 apachedemo.tbd
