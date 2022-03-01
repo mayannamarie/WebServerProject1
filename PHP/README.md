@@ -6,7 +6,7 @@ Referenced from: [How to Install PHP on Windows 10](https://www.sitepoint.com/ho
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 1. [DOWNLOAD AND EXTRACT THE FILES](#download-and-extract-the-files)
 2. [CONFIGURE PATH TO ENVIRONMENT VARIABLE](#configure-path-to-environment-variable)
 3. [PHP MODULE AND DEFAULT PHP FILE](#php-module-and-default-php-file)
@@ -61,7 +61,7 @@ Referenced from: [How to Install PHP on Windows 10](https://www.sitepoint.com/ho
 >    DirectoryIndex index.html  
 > </IfModule>  
 ```
-5. Change this to:
+6. Change this to:
   
 ```
 > <IfModule dir_module>  
@@ -72,13 +72,13 @@ Referenced from: [How to Install PHP on Windows 10](https://www.sitepoint.com/ho
 > ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php1.PNG)  
 > ![php4](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php4.PNG)  
 
-6. Save your httpd.conf and test the updates in the command line by typing the following:  
+7. Save your httpd.conf and test the updates in the command line by typing the following:  
 
-7. cd into `C:\Apache24\bin`, type the following code:  
+8. cd into `C:\Apache24\bin`, type the following code:  
 ```
 httpd -t
 ```
-8. ***Syntax OK*** should appear unless you have errors in your configuration.  
+9. ***Syntax OK*** should appear unless you have errors in your configuration.  
 - If you didn't get an error you can continue by restarting Apache with httpd.  
 > ![php6](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/php6.PNG)  
 ---
