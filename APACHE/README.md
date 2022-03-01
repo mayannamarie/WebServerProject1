@@ -4,10 +4,10 @@
  
  ## TABLE OF CONTENT
 1. [DOWNLOAD THE APACHE FILES](#download-the-apache-files)  
-2. [START APACHE](#start-apache)
+2. [APACHE VERIFICATION](#apache-verification)
 4. [DISABLE DIRECTORY LISTING](#disable-directory-listing)
 5. [CONFIGURE TWO SITES](#configure-two-sites)
-6. [SSL CONFIGURATION ON A VHOST](ssl-configuration-on-a-vhost)
+6. [SSL CONFIGURATION ON A VHOST](#ssl-configuration-on-a-vhost)
  
  ## DOWNLOAD THE APACHE FILES
 1. Download [Apache](https://www.apachelounge.com/download/#google_vignette) 2.4.52 Win64.
@@ -17,7 +17,7 @@
 5. Then install the apache service by typing `httpd.exe -k install`.  
 > ![](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/line11.PNG)
 
-## START APACHE
+## APACHE VERIFICATION
 1. It will ask you for windows firewall access, click allow access.
 2. To start it type in your terminal `httpd.exe -k` start.
 3. After doing this, you can test your browser to see if it works. 
@@ -58,7 +58,7 @@
 > ![hostfile](https://github.com/mayannamarie/WebServerProject1/blob/main/screenshots/hostlast.PNG)  
 - By doing this our client is able to resolve site1.tbd and site2.tbd to the ip of the local server.
 ---  
-
+   
 ## SSL CONFIGURATION ON A VHOST
 1. Edit the `<VirtualHost *:80>` element of site2 as the following:  
 
